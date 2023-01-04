@@ -63,7 +63,7 @@ namespace EmployeeMangagement
             string actualError= driver.FindElement(By.XPath("//p[normalize-space()='Invalid credentials']")).Text;
             //  Console.WriteLine(acutalError.ToUpper());
 
-            Assert.That(actualError.Contains(expectedError),"Assert wrong");
+            Assert.That(actualError.Contains(expectedError),"Assert wrong details");
 
                 }
 
