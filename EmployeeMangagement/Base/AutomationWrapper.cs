@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,20 @@ namespace EmployeeMangagement.Base
 
         public void BeforeMethod()
         {
-            driver = new ChromeDriver();
+            string broswerName = "edge";
+            if (broswerName.ToLower().Equals("edge"))
+            {
+                driver = new EdgeDriver();
+            }
+            else if(broswerName.ToLower().Equals("firefox"))
+            {
+                driver = new FirefoxDriver();
+            }
+            else
+            {
+                driver = new ChromeDriver();
+            }
+            
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
 

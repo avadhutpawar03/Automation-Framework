@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeMangagement.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -45,7 +46,7 @@ namespace EmployeeManagement.Utilities
 
 
 
-        public static object[] validEmployeeData()
+        public static object[] ValidEmployeeData()
         {
             string[] dataset1 = new string[7];
             dataset1[0] = "Admin";
@@ -81,7 +82,18 @@ namespace EmployeeManagement.Utilities
             return allDataSet;
 
 
-
         }
+        public static object[] InvalidLoginData2()
+        {
+            object[] data = ExcelUtils.GetSheetIntoObjectArray(@"C:\Users\avadhutp\Desktop\C#\AutomationFramework\EmployeeMangagement\Base\TestData\Orange.xlsx", "InvalidLoginTest");
+       return data;
+        }
+        public static object[] ValidEmployeeData2()
+        {
+            object[] data = ExcelUtils.GetSheetIntoObjectArray(@"C:\Users\avadhutp\Desktop\C#\AutomationFramework\EmployeeMangagement\Base\TestData\Orange.xlsx", "InvalidLoginTest");
+            return data;
+        }
+
     }
-}
+    }
+

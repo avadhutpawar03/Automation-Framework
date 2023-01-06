@@ -20,21 +20,21 @@ namespace EmployeeMangagement
             driver.FindElement(By.XPath("//button[@type='submit']")).Click();
 
             String actualUrl = driver.Url;
-            Assert.That(actualUrl, Is.EqualTo("\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\";"));
+            Assert.That(actualUrl, Is.EqualTo("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"));
         }
-       
-
-   
 
 
 
- 
-
-   
 
 
 
-            }
+
+
+
+
+
+
+    }
         }
     
 
